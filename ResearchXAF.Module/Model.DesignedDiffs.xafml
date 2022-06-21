@@ -1,11 +1,27 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="ResearchXAF">
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
   </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Organization Structure">
+        <Items>
+          <Item Id="Company_ListView" Index="0" />
+          <Item Id="Plant_ListView" Index="1" />
+          <Item Id="Division_ListView" Index="2" />
+          <Item Id="Employee_ListView" Index="4" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="22.1.2.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.1.2.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
   </Views>

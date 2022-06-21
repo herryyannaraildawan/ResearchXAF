@@ -87,5 +87,11 @@ namespace ResearchXAF.Module.BusinessObjects.Master
             get { return GetCollection<Employee>(nameof(Employees)); }
         }
 
+        [Association("Division-ApplicationUsers")]
+        public XPCollection<ApplicationUser> ApplicationUsers
+        {
+            get { return GetCollection<ApplicationUser>(nameof(ApplicationUsers)); }
+        }
+
     }
 }

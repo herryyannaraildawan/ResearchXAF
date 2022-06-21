@@ -60,4 +60,17 @@ public class ApplicationUser : PermissionPolicyUser, IObjectSpaceLink, ISecurity
             SetPropertyValue(nameof(Plant), ref _Plant, value);
         }
     }
+
+    private Division _Division;
+    [Persistent("DivisionOid"), RuleRequiredField(DefaultContexts.Save)]
+    [Association("Division-ApplicationUsers")]
+    public Division Division
+    {
+        get { return _Division; }
+        set
+        {
+            //if (value != _Division) _Division = null;
+            SetPropertyValue(nameof(Division), ref _Division, value);
+        }
+    }
 }
